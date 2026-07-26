@@ -453,10 +453,19 @@
       <div class="booking-form">
         <h3>Solicitar agendamento</h3>
         <p>Preencha os dados abaixo e nossa equipe confirma o horário por telefone ou WhatsApp.</p>
-        <form onsubmit="event.preventDefault(); alert('Solicitação enviada! Entraremos em contato para confirmar.');">
+        <form action="https://api.staticforms.dev/submit" method="POST">
+          <input type="hidden"
+       name="apiKey"
+       value="sf_34c2cbd3140a0ebf9251f7b5">
           <div class="form-row">
-            <div class="form-group"><label>Nome completo</label><input type="text" required placeholder="Seu nome"></div>
-            <div class="form-group"><label>Telefone / WhatsApp</label><input type="tel" required placeholder="(11) 90000-0000"></div>
+            <div class="form-group"><label>Nome completo</label><input type="text"
+       name="name"
+       required
+       placeholder="Seu nome"></div>
+            <div class="form-group"><label>Telefone / WhatsApp</label><input type="tel"
+       name="phone"
+       required
+       placeholder="(11) 90000-0000"></div>
           </div>
           <div class="form-row">
             <div class="form-group">
